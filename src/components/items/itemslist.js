@@ -47,6 +47,9 @@ const StyledListItem = style.li`
     background-color: #383e4a;
     box-shadow: 0 2px 4px rgba(0,0,0, .2);
     transition-duration: .25s;
+    h3{
+        margin: 15px 0;
+    }
     :hover{
         box-shadow:0 5px 10px rgba(0,0,0,.5);
     }
