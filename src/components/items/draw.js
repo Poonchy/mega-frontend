@@ -1,7 +1,6 @@
 import black from "./assets/black.png"
 import topandbot from "./assets/topandbot.png"
 import goldcoin from "./assets/goldcoin.png"
-import morpheus from "./assets/Morpheus.TTF"
 
 function run (item) {
     var canvas = document.createElement('canvas');
@@ -131,7 +130,6 @@ function getLines(ctx, text, maxWidth) {
 }
 function pasteText(ctx, item, heightCheck, size, text, maxWidth, xoff, yoff) {
     let Lines = getLines(ctx, text, 290)
-    console.log(Lines)
     for (let i in Lines){
         ctx.fillText(Lines[i], xoff, heightCheck)
         heightCheck += size

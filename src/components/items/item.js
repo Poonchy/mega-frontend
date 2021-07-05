@@ -6,15 +6,25 @@ import items from './items.js'
 function Item() {
     const id = useParams()
     const item = items.find(item => item.ID === id.id)
-    console.log(item)
     useEffect (()=>{
-        run(item)
-    },[])
-    return (
-        <StyledDiv id = "canContainer">
-            <div style = {{fontFamily:"Morpheus", fontSize:".1px"}} >.</div>
-        </StyledDiv>
-    );
+        if (item){
+            run(item)
+        }
+    })
+    if (item){
+        return (
+            <StyledDiv id = "canContainer">
+                <div style = {{fontFamily:"Morpheus", fontSize:".1px"}} >.</div>
+            </StyledDiv>
+        );
+    } else {
+        return (
+            <StyledDiv>
+                <h2>404. No item found :(</h2>
+            </StyledDiv>
+        )
+    }
+    
 }
 
 export default Item;
