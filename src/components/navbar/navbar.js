@@ -1,27 +1,15 @@
-import style from 'styled-components';
-import { useState, useEffect } from 'react';
+import {Link} from 'react-router-dom'
 import "./navbar.css"
-import icons from 'feather-icons'
 import {Grid, Coffee} from 'react-feather'
 
-function ItemSearch(props) {
-    const [_, set_] = useState()
-    const handleChange = (e) => {
-        console.log()
-    }
-    const formSubmit = (e) => {
-        console.log()
-    }
-    useEffect(() => {
-        console.log()
-    }, []);
+function ItemSearch() {
     return (
         <section className="smart-scroll">
             <div className="container-fluid">
                 <nav className="navbar navbar-expand-md navbar-dark">
-                    <a className="navbar-brand heading-black" href="index.html">
+                    <Link className="navbar-brand heading-black" to="/">
                         MEGA
-                    </a>
+                    </Link>
                     <button className="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
                         data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -30,16 +18,16 @@ function ItemSearch(props) {
                     <div className="collapse navbar-collapse" id="navbarCollapse">
                         <ul className="navbar-nav ml-auto">
                             <li className="nav-item">
-                                <a className="nav-link page-scroll" href="#features">Commands</a>
+                                <Link className="nav-link page-scroll" to="commands">Commands</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link page-scroll" href="#pricing">Items</a>
+                                <Link className="nav-link page-scroll" to="items">Items</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link page-scroll" href="#blog">News</a>
+                                <Link className="nav-link page-scroll" to="news">News</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link page-scroll d-flex flex-row align-items-center text-primary" href="#">
+                                <a className="nav-link page-scroll d-flex flex-row align-items-center text-primary" href="https://google.com">
                                     <Coffee width="18" height="18"/>
                                     Donation
                                 </a>
