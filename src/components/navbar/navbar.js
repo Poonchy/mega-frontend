@@ -18,13 +18,13 @@ function ItemSearch() {
                     <div className="collapse navbar-collapse" id="navbarCollapse">
                         <ul className="navbar-nav ml-auto">
                             <li className="nav-item">
-                                <Link className="nav-link page-scroll" to="commands">Commands</Link>
+                                <Link className="nav-link page-scroll" to="/commands">Commands</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link page-scroll" to="items">Items</Link>
+                                <Link className="nav-link page-scroll" to="/items">Items</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link page-scroll" to="news">News</Link>
+                                <Link className="nav-link page-scroll" to="/news">News</Link>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link page-scroll d-flex flex-row align-items-center text-primary" href="https://google.com">

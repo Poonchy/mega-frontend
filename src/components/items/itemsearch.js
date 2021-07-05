@@ -2,7 +2,7 @@ import style from 'styled-components';
 import {useState, useEffect} from 'react';
 import $ from 'jquery';
 
-function ItemSearch(props) {
+function ItemSearch() {
     const [itemName, setItemName] = useState({name:""})
     const handleChange = (e) => {
         setItemName({...itemName, [e.target.name]: e.target.value})

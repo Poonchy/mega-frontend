@@ -1,0 +1,18 @@
+.poor{
+    color: rgb(255,255,255);
+}
+.common{
+    color: rgb(255,255,255);
+}
+.rare{
+    color: rgb(0,112,221);
+}
+.uncommon{
+    color: rgb(30,255,0);
+}
+.epic{
+    color: rgb(163,53,238);
+}
+.legendary{
+    color: rgb(255,128,0);
+}

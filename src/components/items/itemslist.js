@@ -1,18 +1,19 @@
 import style from 'styled-components';
-import { useState } from 'react';
-import data from "./mockdata.js"
+import items from "./items.js"
 import { Link } from 'react-router-dom';
+import { useState } from 'react'
+import './colors.css'
 
 function ItemsList(props) {
-    const [items] = useState(data)
+    const [Items] = useState(items)
     return (
         <StyledContainer>
             <StyledUl>
-                {items.map((item)=>{
+                {Items.map((item)=>{
                     return (
-                        <Link key = {item.id} to={`/items/${item.id}`} style={LinkStyle}>
+                        <Link key = {item.ID} to={`/items/${item.ID}`} style={LinkStyle}>
                             <StyledListItem>
-                                <h3>{item.name}</h3>
+                                <h3 className = {item.rarity.toLowerCase()}>[{item.name}]</h3>
                             </StyledListItem>
                         </Link>
                     )
@@ -40,21 +41,22 @@ const StyledListItem = style.li`
     font-size: 18px;
     line-height: 30px;
     letter-spacing: 1px;
-    min-width: 24%;
+    width: 49%;
     margin: 2% .35%;
     display: inline-flex;
-    justify-content:center;
+    justify-content: center;
     background-color: #383e4a;
     box-shadow: 0 2px 4px rgba(0,0,0, .2);
     transition-duration: .25s;
     h3{
-        margin: 15px 0;
+        align-self: center;
+        margin: 20px 0;
     }
     :hover{
         box-shadow:0 5px 10px rgba(0,0,0,.5);
     }
     @media (max-width: 970px){
-        width: 180px;
+        width: 80%
     }
     @media (max-width: 425px){
         width: 100%;

@@ -1,5 +1,5 @@
 import style from 'styled-components';
-import data from './commanddata.js'
+import data from './commanddata.js';
 
 function Commands() {
     return (
@@ -12,7 +12,7 @@ function Commands() {
                 </li>
                 {data.map((com)=>{
                     return (
-                        <li className="table-row">
+                        <li key = {com.command} className="table-row">
                             <div data-label = "Command" className="col col-1">{com.command}</div>
                             <div data-label = "Description" className="col col-2">{com.description}</div>
                         </li>
