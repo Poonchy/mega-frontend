@@ -6,7 +6,7 @@ import './colors.css'
 
 function ItemsList(props) {
     const [Items, setItems] = useState(items)
-    const [itemName, setItemName] = [props.filter, props.setFilter]
+    const [itemName] = [props.filter]
     useEffect(() => {
         const results = items.filter(item=>item.name.toLowerCase().includes(itemName.name.toLowerCase()))
         setItems(results)

@@ -3,6 +3,8 @@ import ItemsList from './components/items/itemslist.js';
 import Navbar from './components/navbar/navbar.js';
 import Commands from './components/commands/commands.js';
 import Item from './components/items/item.js';
+import Recipes from './components/recipes/recipes.js'
+import Recipe from './components/recipes/recipe.js'
 import { Route } from 'react-router-dom';
 import { useState } from 'react'
 
@@ -15,7 +17,7 @@ function App(props) {
             <Navbar />
             <Route exact path="/items">
                 <ItemSearch filter={filter} setFilter = {setFilter}/>
-                <ItemsList filter={filter} setFilter = {setFilter}/>
+                <ItemsList filter={filter}/>
             </Route>
             <Route exact path="/commands">
                 <Commands />
@@ -24,7 +26,10 @@ function App(props) {
                 <Item />
             </Route>
             <Route exact path="/recipes">
-                <Item />
+                <Recipes />
+            </Route>
+            <Route exact path="/recipes/:id">
+                <Recipe />
             </Route>
         </>
     )

@@ -66,12 +66,14 @@ async function run(item) {
             heightCheck = pasteText(ctx, item, heightCheck, 20, `${item.stamina} Stamina`, 288, 7, heightCheck)
         }
         if (item.hasOwnProperty("stat")) {
-            if (item.type.toLowerCase() === "mail" || item.type.toLowerCase() === "sword" || item.type.toLowerCase() === "shield" || item.type.toLowerCase() === "mace" || item.type.toLowerCase() === "axe") {
+            if (item.class.toLowerCase() === "warrior") {
                 heightCheck = pasteText(ctx, item, heightCheck, 20, `${item.stat} Strength`, 288, 7, heightCheck)
-            } else if (item.type.toLowerCase() === "cloth" || item.type.toLowerCase() === "staff") {
+            } else if (item.class.toLowerCase() === "mage") {
                 heightCheck = pasteText(ctx, item, heightCheck, 20, `${item.stat} Intellect`, 288, 7, heightCheck)
-            } else if (item.type.toLowerCase() === "leather" || item.type.toLowerCase() === "dagger") {
+            } else if (item.class.toLowerCase() === "rogue") {
                 heightCheck = pasteText(ctx, item, heightCheck, 20, `${item.stat} Agility`, 288, 7, heightCheck)
+            } else {
+                heightCheck = pasteText(ctx, item, heightCheck, 20, `${item.stat} Primary`, 288, 7, heightCheck)
             }
         }
         if (item.hasOwnProperty("level")) {

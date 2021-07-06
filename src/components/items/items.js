@@ -11,7 +11,8 @@ const data = [
         "slot": "Helmet",
         "type": "Mail",
         "value": "1",
-        "armor": "3"
+        "armor": "3",
+        "class": "warrior"
     },
     {
         "name": "Barbaric Chainmail Shoulderguards",
@@ -24,7 +25,8 @@ const data = [
         "slot": "Shoulders",
         "type": "Mail",
         "value": "1",
-        "armor": "3"
+        "armor": "3",
+        "class": "warrior"
     },
     {
         "name": "Barbaric Chainmail Armor",
@@ -37,7 +39,8 @@ const data = [
         "slot": "Chest",
         "type": "Mail",
         "value": "1",
-        "armor": "3"
+        "armor": "3",
+        "class": "warrior"
     },
     {
         "name": "Barbaric Chainmail Gloves",
@@ -50,7 +53,8 @@ const data = [
         "slot": "Gloves",
         "type": "Mail",
         "value": "1",
-        "armor": "3"
+        "armor": "3",
+        "class": "warrior"
     },
     {
         "name": "Barbaric Chainmail Waistguard",
@@ -63,7 +67,8 @@ const data = [
         "slot": "Waist",
         "type": "Mail",
         "value": "1",
-        "armor": "3"
+        "armor": "3",
+        "class": "warrior"
     },
     {
         "name": "Barbaric Chainmail Legguards",
@@ -76,7 +81,8 @@ const data = [
         "slot": "Legs",
         "type": "Mail",
         "value": "1",
-        "armor": "3"
+        "armor": "3",
+        "class": "warrior"
     },
     {
         "name": "Barbaric Chainmail Sabatons",
@@ -89,7 +95,8 @@ const data = [
         "slot": "Feet",
         "type": "Mail",
         "value": "1",
-        "armor": "3"
+        "armor": "3",
+        "class": "warrior"
     },
     {
         "name": "Heroic Chainmail Helmet",
@@ -103,7 +110,8 @@ const data = [
         "slot": "Helmet",
         "type": "Mail",
         "value": "1",
-        "armor": "3"
+        "armor": "3",
+        "class": "warrior"
     },
     {
         "name": "Heroic Chainmail Shoulderguards",
@@ -116,7 +124,8 @@ const data = [
         "slot": "Shoulders",
         "type": "Mail",
         "value": "1",
-        "armor": "3"
+        "armor": "3",
+        "class": "warrior"
     },
     {
         "name": "Heroic Chainmail Armor",
@@ -129,7 +138,8 @@ const data = [
         "slot": "Chest",
         "type": "Mail",
         "value": "1",
-        "armor": "3"
+        "armor": "3",
+        "class": "warrior"
     },
     {
         "name": "Heroic Chainmail Gloves",
@@ -142,7 +152,8 @@ const data = [
         "slot": "Gloves",
         "type": "Mail",
         "value": "1",
-        "armor": "3"
+        "armor": "3",
+        "class": "warrior"
     },
     {
         "name": "Heroic Chainmail Waistguard",
@@ -155,7 +166,8 @@ const data = [
         "slot": "Waist",
         "type": "Mail",
         "value": "1",
-        "armor": "3"
+        "armor": "3",
+        "class": "warrior"
     },
     {
         "name": "Heroic Chainmail Legguards",
@@ -168,7 +180,8 @@ const data = [
         "slot": "Legs",
         "type": "Mail",
         "value": "1",
-        "armor": "3"
+        "armor": "3",
+        "class": "warrior"
     },
     {
         "name": "Heroic Chainmail Sabatons",
@@ -181,7 +194,8 @@ const data = [
         "slot": "Feet",
         "type": "Mail",
         "value": "1",
-        "armor": "3"
+        "armor": "3",
+        "class": "warrior"
     },
     {
         "name": "Broken Wooden Sword",
@@ -194,7 +208,8 @@ const data = [
         "slot": "Mainhand",
         "type": "Sword",
         "value": "1",
-        "damage": "2 - 4"
+        "damage": "2 - 4",
+        "class": "warrior"
     },
     {
         "name": "Neophyte Hat",
@@ -208,7 +223,8 @@ const data = [
         "slot": "Helmet",
         "type": "Cloth",
         "value": "1",
-        "armor": "1"
+        "armor": "1",
+        "class": "mage"
     },
     {
         "name": "Neophyte Shoulderpads",
@@ -221,7 +237,8 @@ const data = [
         "slot": "Shoulders",
         "type": "Cloth",
         "value": "1",
-        "armor": "1"
+        "armor": "1",
+        "class": "mage"
     },
     {
         "name": "Neophyte Robe",
@@ -234,7 +251,8 @@ const data = [
         "slot": "Chest",
         "type": "Cloth",
         "value": "1",
-        "armor": "1"
+        "armor": "1",
+        "class": "mage"
     },
     {
         "name": "Neophyte Gloves",
@@ -247,7 +265,8 @@ const data = [
         "slot": "Gloves",
         "type": "Cloth",
         "value": "1",
-        "armor": "1"
+        "armor": "1",
+        "class": "mage"
     },
     {
         "name": "Neophyte Sash",
@@ -260,7 +279,8 @@ const data = [
         "slot": "Waist",
         "type": "Cloth",
         "value": "1",
-        "armor": "1"
+        "armor": "1",
+        "class": "mage"
     },
     {
         "name": "Neophyte Pants",
@@ -273,7 +293,8 @@ const data = [
         "slot": "Legs",
         "type": "Cloth",
         "value": "1",
-        "armor": "1"
+        "armor": "1",
+        "class": "mage"
     },
     {
         "name": "Neophyte Slippers",
@@ -286,7 +307,8 @@ const data = [
         "slot": "Feet",
         "type": "Cloth",
         "value": "1",
-        "armor": "1"
+        "armor": "1",
+        "class": "mage"
     },
     {
         "name": "Neophyte Rod",
@@ -299,7 +321,8 @@ const data = [
         "slot": "Mainhand",
         "type": "Staff",
         "value": "1",
-        "damage": "1-1"
+        "damage": "1-1",
+        "class": "mage"
     },
     {
         "name": "Wizard Hat",
@@ -313,7 +336,8 @@ const data = [
         "slot": "Helmet",
         "type": "Cloth",
         "value": "1",
-        "armor": "1"
+        "armor": "1",
+        "class": "mage"
     },
     {
         "name": "Wizard Shoulderpads",
@@ -326,7 +350,8 @@ const data = [
         "slot": "Shoulders",
         "type": "Cloth",
         "value": "1",
-        "armor": "1"
+        "armor": "1",
+        "class": "mage"
     },
     {
         "name": "Wizard Robe",
@@ -339,7 +364,8 @@ const data = [
         "slot": "Chest",
         "type": "Cloth",
         "value": "1",
-        "armor": "1"
+        "armor": "1",
+        "class": "mage"
     },
     {
         "name": "Wizard Gloves",
@@ -352,7 +378,8 @@ const data = [
         "slot": "Gloves",
         "type": "Cloth",
         "value": "1",
-        "armor": "1"
+        "armor": "1",
+        "class": "mage"
     },
     {
         "name": "Wizard Sash",
@@ -365,7 +392,8 @@ const data = [
         "slot": "Waist",
         "type": "Cloth",
         "value": "1",
-        "armor": "1"
+        "armor": "1",
+        "class": "mage"
     },
     {
         "name": "Wizard Pants",
@@ -378,7 +406,8 @@ const data = [
         "slot": "Legs",
         "type": "Cloth",
         "value": "1",
-        "armor": "1"
+        "armor": "1",
+        "class": "mage"
     },
     {
         "name": "Wizard Slippers",
@@ -391,7 +420,8 @@ const data = [
         "slot": "Feet",
         "type": "Cloth",
         "value": "1",
-        "armor": "1"
+        "armor": "1",
+        "class": "mage"
     },
     {
         "name": "Wizard Rod",
@@ -404,7 +434,8 @@ const data = [
         "slot": "Mainhand",
         "type": "Staff",
         "value": "1",
-        "damage": "1-1"
+        "damage": "1-1",
+        "class": "mage"
     },
     {
         "name": "Thief Helmet",
@@ -418,7 +449,8 @@ const data = [
         "slot": "Helmet",
         "type": "Leather",
         "value": "1",
-        "armor": "2"
+        "armor": "2",
+        "class": "rogue"
     },
     {
         "name": "Thief Shoulders",
@@ -431,7 +463,8 @@ const data = [
         "slot": "Shoulders",
         "type": "Leather",
         "value": "1",
-        "armor": "2"
+        "armor": "2",
+        "class": "rogue"
     },
     {
         "name": "Thief Jerkin",
@@ -444,7 +477,8 @@ const data = [
         "slot": "Chest",
         "type": "Leather",
         "value": "1",
-        "armor": "2"
+        "armor": "2",
+        "class": "rogue"
     },
     {
         "name": "Thief Gloves",
@@ -457,7 +491,8 @@ const data = [
         "slot": "Gloves",
         "type": "Leather",
         "value": "1",
-        "armor": "2"
+        "armor": "2",
+        "class": "rogue"
     },
     {
         "name": "Thief Buckle",
@@ -470,7 +505,8 @@ const data = [
         "slot": "Waist",
         "type": "Leather",
         "value": "1",
-        "armor": "2"
+        "armor": "2",
+        "class": "rogue"
     },
     {
         "name": "Thief Pants",
@@ -483,7 +519,8 @@ const data = [
         "slot": "Legs",
         "type": "Leather",
         "value": "1",
-        "armor": "2"
+        "armor": "2",
+        "class": "rogue"
     },
     {
         "name": "Thief Boots",
@@ -496,7 +533,8 @@ const data = [
         "slot": "Feet",
         "type": "Leather",
         "value": "1",
-        "armor": "2"
+        "armor": "2",
+        "class": "rogue"
     },
     {
         "name": "Thief Dagger",
@@ -509,7 +547,8 @@ const data = [
         "slot": "Mainhand",
         "type": "Dagger",
         "value": "1",
-        "damage": "1-3"
+        "damage": "1-3",
+        "class": "rogue"
     },
     {
         "name": "Thief Shiv",
@@ -522,7 +561,8 @@ const data = [
         "slot": "Offhand",
         "type": "Dagger",
         "value": "1",
-        "damage": "1-3"
+        "damage": "1-3",
+        "class": "rogue"
     },
 
     {
@@ -540,7 +580,8 @@ const data = [
         "value": "3",
         "armor": "6",
         "stamina": "3",
-        "stat": "1"
+        "stat": "1",
+        "class": "warrior"
     },
     {
         "name": "Copper Shoulderguards",
@@ -556,7 +597,8 @@ const data = [
         "value": "3",
         "armor": "6",
         "stamina": "3",
-        "stat": "1"
+        "stat": "1",
+        "class": "warrior"
     },
     {
         "name": "Copper Armor",
@@ -572,7 +614,8 @@ const data = [
         "value": "3",
         "armor": "6",
         "stamina": "3",
-        "stat": "1"
+        "stat": "1",
+        "class": "warrior"
     },
     {
         "name": "Copper Gloves",
@@ -588,7 +631,8 @@ const data = [
         "value": "3",
         "armor": "5",
         "stamina": "2",
-        "stat": "1"
+        "stat": "1",
+        "class": "warrior"
     },
     {
         "name": "Copper Waistguard",
@@ -604,7 +648,8 @@ const data = [
         "value": "3",
         "armor": "5",
         "stamina": "2",
-        "stat": "1"
+        "stat": "1",
+        "class": "warrior"
     },
     {
         "name": "Copper Legguards",
@@ -620,7 +665,8 @@ const data = [
         "value": "3",
         "armor": "6",
         "stamina": "3",
-        "stat": "1"
+        "stat": "1",
+        "class": "warrior"
     },
     {
         "name": "Copper Sabatons",
@@ -636,7 +682,8 @@ const data = [
         "value": "3",
         "armor": "5",
         "stamina": "2",
-        "stat": "1"
+        "stat": "1",
+        "class": "warrior"
     },
     {
         "name": "Copper Sword",
@@ -652,7 +699,8 @@ const data = [
         "value": "3",
         "stamina": "3",
         "stat": "2",
-        "damage": "4 - 6"
+        "damage": "4 - 6",
+        "class": "warrior"
     },
 
     {
@@ -672,7 +720,8 @@ const data = [
         "stat": "3",
 
         "value": "1",
-        "armor": "2"
+        "armor": "2",
+        "class": "mage"
     },
     {
         "name": "Linen Shoulderpads",
@@ -690,7 +739,8 @@ const data = [
         "stat": "3",
 
         "value": "1",
-        "armor": "2"
+        "armor": "2",
+        "class": "mage"
     },
     {
         "name": "Linen Robe",
@@ -708,7 +758,8 @@ const data = [
         "stat": "3",
 
         "value": "1",
-        "armor": "2"
+        "armor": "2",
+        "class": "mage"
     },
     {
         "name": "Linen Gloves",
@@ -726,7 +777,8 @@ const data = [
         "stat": "2",
 
         "value": "1",
-        "armor": "2"
+        "armor": "2",
+        "class": "mage"
     },
     {
         "name": "Linen Sash",
@@ -744,7 +796,8 @@ const data = [
         "stat": "2",
 
         "value": "1",
-        "armor": "2"
+        "armor": "2",
+        "class": "mage"
     },
     {
         "name": "Linen Pants",
@@ -762,7 +815,8 @@ const data = [
         "stat": "3",
 
         "value": "1",
-        "armor": "2"
+        "armor": "2",
+        "class": "mage"
     },
     {
         "name": "Linen Slippers",
@@ -780,7 +834,8 @@ const data = [
         "stat": "2",
 
         "value": "1",
-        "armor": "2"
+        "armor": "2",
+        "class": "mage"
     },
     {
         "name": "Linen Rod",
@@ -798,7 +853,65 @@ const data = [
         "stat": "3",
 
         "value": "1",
-        "damage": "1-1"
-    }
+        "damage": "1-1",
+        "class": "mage"
+    },
+
+
+    //Test items
+    {
+        "name": "Elementium Helmet",
+        "ID": "400",
+        "rarity": "Epic",
+        "reagents": "5-copper,4-bronze,3-iron,2-mithril,1-thorium",
+
+        "modelID": "1",
+        "colors": "201 128 60, 144 90 40, 105 105 105, 50 50 50",
+        "showHair": "no",
+
+        "slot": "Helmet",
+        "type": "Mail",
+        "value": "30",
+        "armor": "60",
+        "stamina": "30",
+        "stat": "10",
+        "class": "warrior"
+    },
+    {
+        "name": "Mooncloth Hat",
+        "ID": "500",
+        "rarity": "Epic",
+        "reagents": "5-linen,4-wool,3-silk,2-mageweave,1-runecloth",
+
+        "modelID": "1",
+        "colors": "201 128 60, 144 90 40, 105 105 105, 50 50 50",
+        "showHair": "no",
+
+        "slot": "Helmet",
+        "type": "Cloth",
+        "value": "30",
+        "armor": "10",
+        "stamina": "30",
+        "stat": "60",
+        "class": "mage"
+    },
+    {
+        "name": "Cured Hood",
+        "ID": "600",
+        "rarity": "Epic",
+        "reagents": "5-light,4-medium,3-heavy,2-thick,1-rugged",
+
+        "modelID": "1",
+        "colors": "201 128 60, 144 90 40, 105 105 105, 50 50 50",
+        "showHair": "no",
+
+        "slot": "Helmet",
+        "type": "Leather",
+        "value": "30",
+        "armor": "40",
+        "stamina": "30",
+        "stat": "40",
+        "class": "rogue"
+    },
 ]
 export default data;

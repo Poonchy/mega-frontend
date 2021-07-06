@@ -1,5 +1,5 @@
 import style from 'styled-components';
-import {useState, useEffect} from 'react';
+import { useEffect } from 'react';
 import $ from 'jquery';
 
 function ItemSearch(props) {
@@ -9,7 +9,6 @@ function ItemSearch(props) {
     }
     const formSubmit = (e) => {
         e.preventDefault();
-        console.log(itemName.name)
     }
     useEffect(() => {
         itemName.name.length > 0 ? 

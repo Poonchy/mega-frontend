@@ -1,7 +1,7 @@
 import run from './draw.js'
 import React, {useEffect} from 'react';
 import style from 'styled-components'
-import {useParams} from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import items from './items.js'
 function Item() {
     const id = useParams()
