@@ -2,109 +2,112 @@ import black from "./assets/black.png"
 import topandbot from "./assets/topandbot.png"
 import goldcoin from "./assets/goldcoin.png"
 
-function run (item) {
+async function run(item) {
     var canvas = document.createElement('canvas');
     canvas.width = "300";
     canvas.height = `1200`
-	var ctx = canvas.getContext("2d");
-    var heightCheck = 30
-
-    var Black = new Image();
-    Black.src = black;
-    Black.onload = function() {
-        ctx.drawImage(Black,0,0);
-    }
-    var TopAndBot = new Image();
-    TopAndBot.src = topandbot;
-    TopAndBot.onload = function() {
-        ctx.drawImage(TopAndBot,0,0);
-        ctx.font = "24px Morpheus";
-        ctx.textAlign = "center";
-        if(item.rarity.toLowerCase() === "poor") {
-            ctx.fillStyle = 'rgb(100,100,100)';
+    var ctx = canvas.getContext("2d");
+    var largefont = new Image();
+    largefont.src = "./assets/Morpheus.TTF"
+    largefont.onerror = function () {
+        ctx.font = "24px Morpheus"
+        var heightCheck = 30
+        var Black = new Image();
+        Black.src = black;
+        Black.onload = function () {
+            ctx.drawImage(Black, 0, 0);
         }
-        else if(item.rarity.toLowerCase() === "common") {
-            ctx.fillStyle = 'rgb(255,255,255)';
-        }
-        else if(item.rarity.toLowerCase() === "rare") {
-            ctx.fillStyle = 'rgb(0,112,221)';
-        }
-        else if(item.rarity.toLowerCase() === "uncommon") {
-            ctx.fillStyle = 'rgb(30,255,0)';
-        }
-        else if(item.rarity.toLowerCase() === "epic") {
-            ctx.fillStyle = 'rgb(163,53,238)';
-        }
-        else if(item.rarity.toLowerCase() === "legendary") {
-            ctx.fillStyle = 'rgb(255,128,0)';
-        }
-
-        //Name of the item
-        heightCheck = pasteText(ctx, item, heightCheck, 24, `[${item.name}]`, 288, 150, heightCheck)
-
-        heightCheck += 7
-        ctx.fillStyle = 'rgb(255,255,255)';
-        ctx.font = "20px Morpheus";
-        //Stat values of the item
-        if (item.hasOwnProperty("slot") && item.hasOwnProperty("type")){
-            ctx.textAlign = "start";
-            heightCheck = pasteText(ctx, item, heightCheck, -5, `${item.slot}`, 288, 7, heightCheck)
-            ctx.textAlign = "end";
-            heightCheck = pasteText(ctx, item, heightCheck, 20, `${item.type}`, 288, 287, heightCheck)
-        } else if (item.hasOwnProperty("slot") && item.hasOwnProperty("type")) {
-            ctx.textAlign = "start";
-            heightCheck = pasteText(ctx, item, heightCheck, 20, `${item.type}`, 288, 7, heightCheck)
-        }
-        ctx.textAlign = "start";
-        if (item.hasOwnProperty("damage")){
-            heightCheck = pasteText(ctx, item, heightCheck, 20, `${item.damage} Damage`, 288, 7, heightCheck)
-        }
-        if (item.hasOwnProperty("armor")){
-            heightCheck = pasteText(ctx, item, heightCheck, 20, `${item.armor} Armor`, 288, 7, heightCheck)
-        }
-        if (item.hasOwnProperty("stamina")){
-            heightCheck = pasteText(ctx, item, heightCheck, 20, `${item.stamina} Stamina`, 288, 7, heightCheck)
-        }
-        if (item.hasOwnProperty("stat")){
-            if (item.type.toLowerCase() === "mail" || item.type.toLowerCase() === "sword" || item.type.toLowerCase() === "shield" ||  item.type.toLowerCase() === "mace" ||  item.type.toLowerCase() === "axe"){
-                heightCheck = pasteText(ctx, item, heightCheck, 20, `${item.stat} Strength`, 288, 7, heightCheck)
-            } else if (item.type.toLowerCase() === "cloth" || item.type.toLowerCase() === "staff") {
-                heightCheck = pasteText(ctx, item, heightCheck, 20, `${item.stat} Intellect`, 288, 7, heightCheck)
-            } else if (item.type.toLowerCase() === "leather" || item.type.toLowerCase() === "dagger") {
-                heightCheck = pasteText(ctx, item, heightCheck, 20, `${item.stat} Agility`, 288, 7, heightCheck)
+        var TopAndBot = new Image();
+        TopAndBot.src = topandbot;
+        TopAndBot.onload = function () {
+            ctx.drawImage(TopAndBot, 0, 0);
+            ctx.textAlign = "center";
+            if (item.rarity.toLowerCase() === "poor") {
+                ctx.fillStyle = 'rgb(100,100,100)';
             }
-        }
-        if (item.hasOwnProperty("level")){
-            heightCheck = pasteText(ctx, item, heightCheck, 20, `Requires level: ${item.level}`, 288, 7, heightCheck)
-        }
-        if (item.hasOwnProperty("flavor")){
-            ctx.fillStyle = 'rgb(120,120,120)';
-            heightCheck = pasteText(ctx, item, heightCheck, 20, `${item.flavor}`, 288, 7, heightCheck)
+            else if (item.rarity.toLowerCase() === "common") {
+                ctx.fillStyle = 'rgb(255,255,255)';
+            }
+            else if (item.rarity.toLowerCase() === "rare") {
+                ctx.fillStyle = 'rgb(0,112,221)';
+            }
+            else if (item.rarity.toLowerCase() === "uncommon") {
+                ctx.fillStyle = 'rgb(30,255,0)';
+            }
+            else if (item.rarity.toLowerCase() === "epic") {
+                ctx.fillStyle = 'rgb(163,53,238)';
+            }
+            else if (item.rarity.toLowerCase() === "legendary") {
+                ctx.fillStyle = 'rgb(255,128,0)';
+            }
+
+            //Name of the item
+            heightCheck = pasteText(ctx, item, heightCheck, 24, `[${item.name}]`, 288, 150, heightCheck)
+
+            heightCheck += 7
             ctx.fillStyle = 'rgb(255,255,255)';
-        }
-        if (item.hasOwnProperty("value")){
-            heightCheck = pasteText(ctx, item, heightCheck, -5, `Sell value: ${item.value}`, 288, 7, heightCheck)
-            let metrics = ctx.measureText(`Sell value: ${item.value}`)
-            var GoldCoin = new Image();
-            GoldCoin.src = goldcoin;
-            GoldCoin.onload = function() {
-                ctx.drawImage(GoldCoin,metrics.width + 10,heightCheck - 16);
-                heightCheck += 10
-                ctx.drawImage(TopAndBot, 0, heightCheck)
+            ctx.font = "20px Morpheus";
+            //Stat values of the item
+            if (item.hasOwnProperty("slot") && item.hasOwnProperty("type")) {
+                ctx.textAlign = "start";
+                heightCheck = pasteText(ctx, item, heightCheck, -5, `${item.slot}`, 288, 7, heightCheck)
+                ctx.textAlign = "end";
+                heightCheck = pasteText(ctx, item, heightCheck, 20, `${item.type}`, 288, 287, heightCheck)
+            } else if (item.hasOwnProperty("slot") && item.hasOwnProperty("type")) {
+                ctx.textAlign = "start";
+                heightCheck = pasteText(ctx, item, heightCheck, 20, `${item.type}`, 288, 7, heightCheck)
+            }
+            ctx.textAlign = "start";
+            if (item.hasOwnProperty("damage")) {
+                heightCheck = pasteText(ctx, item, heightCheck, 20, `${item.damage} Damage`, 288, 7, heightCheck)
+            }
+            if (item.hasOwnProperty("armor")) {
+                heightCheck = pasteText(ctx, item, heightCheck, 20, `${item.armor} Armor`, 288, 7, heightCheck)
+            }
+            if (item.hasOwnProperty("stamina")) {
+                heightCheck = pasteText(ctx, item, heightCheck, 20, `${item.stamina} Stamina`, 288, 7, heightCheck)
+            }
+            if (item.hasOwnProperty("stat")) {
+                if (item.type.toLowerCase() === "mail" || item.type.toLowerCase() === "sword" || item.type.toLowerCase() === "shield" || item.type.toLowerCase() === "mace" || item.type.toLowerCase() === "axe") {
+                    heightCheck = pasteText(ctx, item, heightCheck, 20, `${item.stat} Strength`, 288, 7, heightCheck)
+                } else if (item.type.toLowerCase() === "cloth" || item.type.toLowerCase() === "staff") {
+                    heightCheck = pasteText(ctx, item, heightCheck, 20, `${item.stat} Intellect`, 288, 7, heightCheck)
+                } else if (item.type.toLowerCase() === "leather" || item.type.toLowerCase() === "dagger") {
+                    heightCheck = pasteText(ctx, item, heightCheck, 20, `${item.stat} Agility`, 288, 7, heightCheck)
+                }
+            }
+            if (item.hasOwnProperty("level")) {
+                heightCheck = pasteText(ctx, item, heightCheck, 20, `Requires level: ${item.level}`, 288, 7, heightCheck)
+            }
+            if (item.hasOwnProperty("flavor")) {
+                ctx.fillStyle = 'rgb(120,120,120)';
+                heightCheck = pasteText(ctx, item, heightCheck, 20, `${item.flavor}`, 288, 7, heightCheck)
+                ctx.fillStyle = 'rgb(255,255,255)';
+            }
+            if (item.hasOwnProperty("value")) {
+                heightCheck = pasteText(ctx, item, heightCheck, -5, `Sell value: ${item.value}`, 288, 7, heightCheck)
+                let metrics = ctx.measureText(`Sell value: ${item.value}`)
+                var GoldCoin = new Image();
+                GoldCoin.src = goldcoin;
+                GoldCoin.onload = function () {
+                    ctx.drawImage(GoldCoin, metrics.width + 10, heightCheck - 16);
+                    heightCheck += 10
+                    ctx.drawImage(TopAndBot, 0, heightCheck)
 
-                
-                let destCanvas = document.createElement('canvas');
-                destCanvas.width = "300";
-                destCanvas.height = `${heightCheck+5}`
-                destCanvas.getContext('2d').drawImage(canvas,
-                0, 0, 300, heightCheck+5,
-                0, 0, 300, heightCheck+5)
-                destCanvas.setAttribute("id","imafailure")
 
-                let container = document.getElementById("canContainer")
-                container.appendChild(destCanvas)
-                canvas.remove()
-            
+                    let destCanvas = document.createElement('canvas');
+                    destCanvas.width = "300";
+                    destCanvas.height = `${heightCheck + 5}`
+                    destCanvas.getContext('2d').drawImage(canvas,
+                        0, 0, 300, heightCheck + 5,
+                        0, 0, 300, heightCheck + 5)
+                    destCanvas.setAttribute("id", "imafailure")
+
+                    let container = document.getElementById("canContainer")
+                    container.appendChild(destCanvas)
+                    canvas.remove()
+
+                }
             }
         }
     }
@@ -130,7 +133,7 @@ function getLines(ctx, text, maxWidth) {
 }
 function pasteText(ctx, item, heightCheck, size, text, maxWidth, xoff, yoff) {
     let Lines = getLines(ctx, text, 290)
-    for (let i in Lines){
+    for (let i in Lines) {
         ctx.fillText(Lines[i], xoff, heightCheck)
         heightCheck += size
     }

@@ -12,6 +12,7 @@ a{
 @font-face {
     font-family: 'Morpheus';
     src: url('./components/items/assets/Morpheus.TTF');
+    src: font-url('./components/items/assets/Morpheus.TTF');
 }
 
 :root {
