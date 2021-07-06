@@ -14,13 +14,13 @@ function Item() {
     if (item){
         return (
             <StyledDiv id = "canContainer">
-                <div style = {{fontFamily:"Morpheus", fontSize:".1px"}} >.</div>
+                <div id = "loading" style = {{fontSize:"40px", fontFamily:"Morpheus"}}>Loading...</div>
             </StyledDiv>
         );
     } else {
         return (
             <StyledDiv>
-                <h2>404. No item found :(</h2>
+                <h2>404. No item found 😥</h2>
             </StyledDiv>
         )
     }

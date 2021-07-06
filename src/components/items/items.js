@@ -799,6 +799,6 @@ const data = [
 
         "value": "1",
         "damage": "1-1"
-    },
+    }
 ]
 export default data;

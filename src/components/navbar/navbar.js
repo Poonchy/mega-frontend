@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom'
 import "./navbar.css"
-import {Grid, Coffee} from 'react-feather'
+import {Menu, Coffee} from 'react-feather'
 
 function ItemSearch() {
     return (
@@ -13,7 +13,7 @@ function ItemSearch() {
                     <button className="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
                         data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
                         aria-label="Toggle navigation">
-                        <Grid color="#FFF"/>
+                        <Menu color="#FFF"/>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarCollapse">
                         <ul className="navbar-nav ml-auto">
@@ -24,10 +24,13 @@ function ItemSearch() {
                                 <Link className="nav-link page-scroll" to="/items">Items</Link>
                             </li>
                             <li className="nav-item">
+                                <Link className="nav-link page-scroll" to="/recipes">Recipes</Link>
+                            </li>
+                            <li className="nav-item">
                                 <Link className="nav-link page-scroll" to="/news">News</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link page-scroll d-flex flex-row align-items-center text-primary" href="https://google.com">
+                                <a className="nav-link page-scroll d-flex flex-row align-items-center text-primary" rel="noreferrer" target="_blank" href="https://ko-fi.com/poonchy">
                                     <Coffee width="18" height="18"/>
                                     Donation
                                 </a>

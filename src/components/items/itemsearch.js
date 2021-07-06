@@ -2,8 +2,8 @@ import style from 'styled-components';
 import {useState, useEffect} from 'react';
 import $ from 'jquery';
 
-function ItemSearch() {
-    const [itemName, setItemName] = useState({name:""})
+function ItemSearch(props) {
+    const [itemName, setItemName] = [props.filter, props.setFilter]
     const handleChange = (e) => {
         setItemName({...itemName, [e.target.name]: e.target.value})
     }
@@ -17,8 +17,8 @@ function ItemSearch() {
         $("#inpt_search").parent("label").removeClass("active");
     }, [itemName.name.length]);
     return (
-        <StyledForm className="cntr" onSubmit = {formSubmit}>
-            <div className="cntr-innr">
+        <StyledForm onSubmit = {formSubmit}>
+            <div>
             <StyledSearch>
                 <input
                     id = "inpt_search"
@@ -42,7 +42,7 @@ export default ItemSearch;
 const StyledForm = style.form`
     display:table;
     width:100%;
-    .cntr-innr{
+    div{
         display:table-cell;
         text-align:center;
         vertical-align:middle

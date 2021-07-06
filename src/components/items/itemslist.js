@@ -1,11 +1,17 @@
 import style from 'styled-components';
 import items from "./items.js"
 import { Link } from 'react-router-dom';
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './colors.css'
 
 function ItemsList(props) {
-    const [Items] = useState(items)
+    const [Items, setItems] = useState(items)
+    const [itemName, setItemName] = [props.filter, props.setFilter]
+    useEffect(() => {
+        const results = items.filter(item=>item.name.toLowerCase().includes(itemName.name.toLowerCase()))
+        setItems(results)
+    }, [itemName]);
+
     return (
         <StyledContainer>
             <StyledUl>
@@ -50,6 +56,8 @@ const StyledListItem = style.li`
     transition-duration: .25s;
     h3{
         align-self: center;
+        font-size:20px;
+        font-family: Morpheus;
         margin: 20px 0;
     }
     :hover{
