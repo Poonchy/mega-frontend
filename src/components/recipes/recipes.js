@@ -1,7 +1,7 @@
 import style from 'styled-components';
 import items from "../items/items.js"
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 function Recipes(props) {
     const [Items, setItems] = useState([])

@@ -2,9 +2,8 @@ import style from 'styled-components';
 import items from "../items/items.js";
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import data from '../items/items.js';
 
-function Recipe(props) {
+function Recipe() {
     const [reagents, setReagents] = useState([])
     const id = useParams()
     const item = items.find(item => item.ID === id.id && item.hasOwnProperty("reagents"))
@@ -27,7 +26,7 @@ function Recipe(props) {
             })
             setReagents(finalArr)
         }
-    }, [])
+    }, [item])
     if (item){
         return (
             <StyledDiv id = "canContainer">
