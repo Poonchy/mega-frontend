@@ -5,6 +5,7 @@ import Commands from './components/commands/commands.js';
 import Item from './components/items/item.js';
 import Recipes from './components/recipes/recipes.js'
 import Recipe from './components/recipes/recipe.js'
+import Intro from './components/intro/intro.js'
 import { Route } from 'react-router-dom';
 import { useState } from 'react'
 
@@ -15,6 +16,9 @@ function App(props) {
     return(
         <>
             <Navbar />
+            <Route exact path="/">
+                <Intro />
+            </Route>
             <Route exact path="/items">
                 <ItemSearch filter={filter} setFilter = {setFilter}/>
                 <ItemsList filter={filter}/>

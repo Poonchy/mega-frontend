@@ -1,73 +1,73 @@
 body, html {
-  margin: 0;
-  background-color: #2A2E37;
-  color: white;
-  font-family:'Cthulhumbus';
-  font-size:16px;
-}
-
-a {
-    text-decoration: none;
-}
-
-@font-face {
-    font-family: 'Morpheus';
-    src: url('./components/items/assets/Morpheus.woff2');
-    src: font-url('./components/items/assets/Morpheus.woff2');
-}
-
-@font-face {
-    font-family: 'Cthulhumbus';
-    src: url('./components/items/assets/Cthulhumbus.ttf');
-    src: font-url('./components/items/assets/Cthulhumbus.ttf');
-}
-
-:root {
-    --blue: #2979ff;
-    --indigo: #3d5afe;
-    --purple: #d500f9;
-    --pink: #f50057;
-    --red: #ff1744;
-    --orange: #ff9100;
-    --yellow: #ffea00;
-    --green: #00e676;
-    --teal: #1de9b6;
-    --cyan: #00e5ff;
-    --white: #ffffff;
-    --gray: #607D8B;
-    --gray-dark: #455A64;
-    --primary: #1de9b6;
-    --secondary: #ffffff;
-    --success: #00e676;
-    --info: #00e5ff;
-    --warning: #ffea00;
-    --danger: #ff1744;
-    --light: #ECEFF1;
-    --dark: #11171a;
-    --breakpoint-xs: 0;
-    --breakpoint-sm: 576px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 992px;
-    --breakpoint-xl: 1200px;
-    --font-family-sans-serif: "Cthulumbus", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-  border: none;
-  caret-color: white;
-  transition: background-color 50000s ease-in-out 0s;
-  -webkit-transition: background-color 50000s ease-in-out 0s;
-  -webkit-text-fill-color: white;
-}
-input:-webkit-autofill::first-line {
-    font-size: 20px;
-}
+    margin: 0;
+    background-color: #2A2E37;
+    color: white;
+    font-family:'Cthulhumbus';
+    font-size:16px;
+  }
+  
+  a {
+      text-decoration: none;
+  }
+  
+  @font-face {
+      font-family: 'Morpheus';
+      src: url('./components/items/assets/Morpheus.woff2');
+      src: font-url('./components/items/assets/Morpheus.woff2');
+  }
+  
+  @font-face {
+      font-family: 'Cthulhumbus';
+      src: url('./components/items/assets/Cthulhumbus.ttf');
+      src: font-url('./components/items/assets/Cthulhumbus.ttf');
+  }
+  
+  :root {
+      --blue: #2979ff;
+      --indigo: #3d5afe;
+      --purple: #d500f9;
+      --pink: #f50057;
+      --red: #ff1744;
+      --orange: #ff9100;
+      --yellow: #ffea00;
+      --green: #00e676;
+      --teal: #1de9b6;
+      --cyan: #00e5ff;
+      --white: #ffffff;
+      --gray: #607D8B;
+      --gray-dark: #455A64;
+      --primary: #1de9b6;
+      --secondary: #ffffff;
+      --success: #00e676;
+      --info: #00e5ff;
+      --warning: #ffea00;
+      --danger: #ff1744;
+      --light: #ECEFF1;
+      --dark: #11171a;
+      --breakpoint-xs: 0;
+      --breakpoint-sm: 576px;
+      --breakpoint-md: 768px;
+      --breakpoint-lg: 992px;
+      --breakpoint-xl: 1200px;
+      --font-family-sans-serif: "Cthulumbus", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+  
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover, 
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    border: none;
+    caret-color: white;
+    transition: background-color 50000s ease-in-out 0s;
+    -webkit-transition: background-color 50000s ease-in-out 0s;
+    -webkit-text-fill-color: white;
+  }
+  input:-webkit-autofill::first-line {
+      font-size: 20px;
+  }
