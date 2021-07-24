@@ -6,6 +6,7 @@ import Item from './components/items/item.js';
 import Recipes from './components/recipes/recipes.js'
 import Recipe from './components/recipes/recipe.js'
 import Intro from './components/intro/intro.js'
+import Support from './components/support/support.js'
 import { Route } from 'react-router-dom';
 import { useState } from 'react'
 
@@ -34,6 +35,9 @@ function App(props) {
             </Route>
             <Route exact path="/recipes/:id">
                 <Recipe />
+            </Route>
+            <Route exact path="/support">
+                <Support />
             </Route>
         </>
     )

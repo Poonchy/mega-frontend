@@ -30,7 +30,6 @@ const StyledDesc = style.p`
     font-size: 24px;
     letter-spacing: .5px;
 `
-
 const StyledInvite = style.a`
     text-decoration: none;
     display: inline-block;

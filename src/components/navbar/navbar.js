@@ -30,10 +30,7 @@ function ItemSearch() {
                                 <Link className="nav-link page-scroll" to="/news">News</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link page-scroll d-flex flex-row align-items-center text-primary" rel="noreferrer" target="_blank" href="https://ko-fi.com/poonchy">
-                                    <Coffee width="18" height="18"/>
-                                    Donation
-                                </a>
+                                <Link className="nav-link page-scroll d-flex flex-row align-items-center text-primary" to="/support"><Coffee width="18" height="18"/>Support</Link>
                             </li>
                         </ul>
                     </div>

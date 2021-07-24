@@ -79,6 +79,34 @@ async function run(item) {
         if (item.hasOwnProperty("level")) {
             heightCheck = pasteText(ctx, item, heightCheck, 20, `Requires level: ${item.level}`, 288, 7, heightCheck)
         }
+
+
+        if (item.hasOwnProperty("spells")){
+            ctx.fillStyle = 'rgb(30,255,0)';
+            for (const spell in item.spells){
+                if (item.spells[spell].type === "active"){
+                    heightCheck = pasteText(ctx, item, heightCheck, 20, `Use: ${item.spells[spell].description}`, 288, 7, heightCheck)
+                }
+                else if (item.spells[spell].type === "proc"){
+                    heightCheck = pasteText(ctx, item, heightCheck, 20, `On Hit: ${item.spells[spell].description}`, 288, 7, heightCheck)
+                }
+                else if (item.spells[spell].type === "onhit"){
+                    heightCheck = pasteText(ctx, item, heightCheck, 20, `Equipped: ${item.spells[spell].description}`, 288, 7, heightCheck)
+                }
+            }
+        }
+        
+        ctx.fillStyle = 'rgb(255,255,255)';
+
+        if (item.hasOwnProperty("charges")){
+            if (parseInt(item.charges) > 1){
+                heightCheck = pasteText(ctx, item, heightCheck, 20, `${item.charges} Charges`, 288, 7, heightCheck)
+            } else {
+                heightCheck = pasteText(ctx, item, heightCheck, 20, `${item.charges} Charge`, 288, 7, heightCheck)
+            }
+        }
+
+
         if (item.hasOwnProperty("flavor")) {
             ctx.fillStyle = 'rgb(120,120,120)';
             heightCheck = pasteText(ctx, item, heightCheck, 20, `${item.flavor}`, 288, 7, heightCheck)
