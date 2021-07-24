@@ -39,6 +39,9 @@ function App(props) {
             <Route exact path="/support">
                 <Support />
             </Route>
+            <Route path="/*">
+                <Intro />
+            </Route>
         </>
     )
 }
