@@ -7,7 +7,7 @@ import Recipes from './components/recipes/recipes.js'
 import Recipe from './components/recipes/recipe.js'
 import Intro from './components/intro/intro.js'
 import Support from './components/support/support.js'
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { useState } from 'react'
 
 
@@ -16,32 +16,34 @@ function App(props) {
     
     return(
         <>
-            <Navbar />
-            <Route exact path="/">
-                <Intro />
-            </Route>
-            <Route exact path="/items">
-                <ItemSearch filter={filter} setFilter = {setFilter}/>
-                <ItemsList filter={filter}/>
-            </Route>
-            <Route exact path="/commands">
-                <Commands />
-            </Route>
-            <Route exact path="/items/:id">
-                <Item />
-            </Route>
-            <Route exact path="/recipes">
-                <Recipes />
-            </Route>
-            <Route exact path="/recipes/:id">
-                <Recipe />
-            </Route>
-            <Route exact path="/support">
-                <Support />
-            </Route>
-            <Route path="/*">
-                <Intro />
-            </Route>
+        <Navbar />
+            <Switch>
+                <Route exact path="/">
+                    <Intro />
+                </Route>
+                <Route exact path="/items">
+                    <ItemSearch filter={filter} setFilter = {setFilter}/>
+                    <ItemsList filter={filter}/>
+                </Route>
+                <Route exact path="/commands">
+                    <Commands />
+                </Route>
+                <Route exact path="/items/:id">
+                    <Item />
+                </Route>
+                <Route exact path="/recipes">
+                    <Recipes />
+                </Route>
+                <Route exact path="/recipes/:id">
+                    <Recipe />
+                </Route>
+                <Route exact path="/support">
+                    <Support />
+                </Route>
+                <Route path="/*">
+                    <Intro />
+                </Route>
+            </Switch>
         </>
     )
 }

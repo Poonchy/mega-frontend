@@ -27,9 +27,6 @@ function ItemSearch() {
                                 <Link className="nav-link page-scroll" to="/recipes">Recipes</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link page-scroll" to="/news">News</Link>
-                            </li>
-                            <li className="nav-item">
                                 <Link className="nav-link page-scroll d-flex flex-row align-items-center text-primary" to="/support"><Coffee width="18" height="18"/>Support</Link>
                             </li>
                         </ul>
