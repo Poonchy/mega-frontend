@@ -62,6 +62,10 @@ const data = [
     {
         command:"Mega Shop <shop>",
         description:"Talk to a merchant and browse their wares (hint: they've always got something important to say). \nAvailable are Deadmines"
+    },
+    {
+        command:"Mega Report <text>",
+        description:"Report any bugs to the developer by sending him a message directly. Alternatively, you can directly message the bot."
     }
 ]
 

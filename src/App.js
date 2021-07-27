@@ -7,6 +7,7 @@ import Recipes from './components/recipes/recipes.js'
 import Recipe from './components/recipes/recipe.js'
 import Intro from './components/intro/intro.js'
 import Support from './components/support/support.js'
+import Patches from './components/patches/patches.js'
 import { Route, Switch } from 'react-router-dom';
 import { useState } from 'react'
 
@@ -39,6 +40,9 @@ function App(props) {
                 </Route>
                 <Route exact path="/support">
                     <Support />
+                </Route>
+                <Route exact path="/patches">
+                    <Patches />
                 </Route>
                 <Route path="/*">
                     <Intro />

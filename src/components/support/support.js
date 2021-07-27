@@ -10,10 +10,13 @@ function Support(props) {
                 <h2><a className="text-primary" href = "https://top.gg/bot/494205292091801610">Top.gg</a></h2>
                 <h2><a className="text-primary" href = "https://discord.bots.gg/bots/494205292091801610">Discord Bots</a></h2>
                 <h2><a className="text-primary" href = "https://discordbotlist.com/bots/mega-4951">Discord Bot List</a></h2>
-                <StyledH2>If you really, really enjoy MEGA and want to show some appreciation, <StyledAnchor className="text-primary" rel="noreferrer" target="_blank" href="https://ko-fi.com/poonchy">
-                    <Coffee width="26" height="26"/>
-                      consider supporting me ❤
-                </StyledAnchor></StyledH2>
+                    <span>
+                    <StyledH2>If you really, really enjoy MEGA and want to show some appreciation, <StyledAnchor className="text-primary" rel="noreferrer" target="_blank" href="https://ko-fi.com/poonchy">
+                        <Coffee width="26" height="26"/>
+                        consider supporting me ❤
+                    </StyledAnchor></StyledH2>
+                    </span>
+
             </div>
         </StyledDiv>
     );
@@ -22,19 +25,19 @@ function Support(props) {
 export default Support;
 
 const StyledDiv = style.div`
-margin-top:20px;
-width:100%;
-height: calc(100vh - 110px);
-display:flex;
-flex-wrap:wrap;
-text-align: center;
-justify-content:center;
-align-items:center;
+    margin-top:20px;
+    width:100%;
+    height: calc(100vh - 110px);
+    display:flex;
+    flex-wrap:wrap;
+    text-align: center;
+    justify-content:center;
+    align-items:center;
 `
 const StyledH2 = style.h2`
     flex: None;
     text-align:center;
-    display: inline-flex;
+    display: block;
     vertical-align: center;
     align-items: center;
     justify-content:space around;
@@ -47,4 +50,10 @@ const StyledAnchor = style.a`
     vertical-align: center;
     align-items: center;
     margin-left: 10px;
+    @media (max-width: 350px) {
+        align-items: end;
+        *{
+            margin-top:5px;
+        }
+    }
 `
